@@ -149,6 +149,7 @@ def process_custom():
                     original_content = df.read()
                     df.seek(0, 0)
                     df.write(f"# --- Custom Rules Start ---\n{custom_content}\n# --- Custom Rules End ---\n\n" + original_content)
+                    df.truncate()
             else:
                 print(f"---> 新增个人独立规则: {rel_path}")
                 shutil.copy2(src_path, dest_path)
