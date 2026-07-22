@@ -80,12 +80,47 @@ def process_blackmatrix7():
             print("[Warning] blackmatrix7/rule/Clash 目录不存在")
 
 def process_accademia():
-    """克隆并覆盖 Accademia 的规则 (精修/补充层，同名文件级覆盖)"""
+    """克隆并覆盖 Accademia 的规则 (精修/补充层，同名目录彻底替换)"""
     print("===> 2. 正在拉取 Accademia/Additional_Rule_For_Clash 规则 (精修/补充层)...")
     ac_dir = os.path.join(TEMP_DIR, "accademia")
-    if run_git_clone(ACCADEMIA_URL, ac_dir):
-        count = copy_files_recursive(ac_dir, RULES_DIR, is_accademia=True)
-        print(f"===> Accademia 完成，共覆盖/新增 {count} 个文件。")
+    if not run_git_clone(ACCADEMIA_URL, ac_dir):
+        return
+
+    count = 0
+    # 遍历 Accademia 仓库根目录下的所有子项
+    for item in os.listdir(ac_dir):
+        if item.startswith(".") or item == "LICENSE":
+            continue
+        
+        src_item = os.path.join(ac_dir, item)
+        dst_item = os.path.join(RULES_DIR, item)
+
+        # 场景 A: 文件夹（如 ChinaMax, China, Grok 等）-> 同名目录彻底删除后整体替换
+        if os.path.isdir(src_item):
+            if os.path.exists(dst_item):
+                print(f"---> [目录完全取代] 删除 blackmatrix7 旧目录: rules/{item}")
+                shutil.rmtree(dst_item, ignore_errors=True)
+            
+            # 复制 Accademia 的全新子目录 (排除内部可能存在的 .git)
+            shutil.copytree(
+                src_item, 
+                dst_item, 
+                ignore=shutil.ignore_patterns('.git*', '*.tmp')
+            )
+            count += 1
+
+        # 场景 B: 根目录文件（如 README.md）-> 追加合并到 rules/README.md 底部
+        elif os.path.isfile(src_item):
+            if item == "README.md" and os.path.exists(dst_item):
+                print("---> 合并 Accademia 根目录 README.md 至 rules/README.md 底部")
+                with open(src_item, 'r', encoding='utf-8') as sf, open(dst_item, 'a', encoding='utf-8') as df:
+                    df.write("\n\n---\n# 🔴 🟡 🟢 Accademia / Additional_Rule_For_Clash 补充规则说明\n\n")
+                    df.write(sf.read())
+            else:
+                shutil.copy2(src_item, dst_item)
+            count += 1
+
+    print(f"===> Accademia 完成，共处理/替换 {count} 个目录及根文件。")
 
 def process_custom():
     """处理个人自定义规则 (最高优先级)"""
