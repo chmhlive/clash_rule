@@ -42,9 +42,11 @@ def run_git_clone(repo_url, target_dir):
         return False
 
 def copy_files_recursive(src_dir, dst_dir):
-    """递归复制文件，同名覆盖"""
+    """递归复制文件，同名覆盖（过滤 .git 及隐藏目录）"""
     count = 0
-    for root, _, files in os.walk(src_dir):
+    for root, dirs, files in os.walk(src_dir):
+        # 排除 .git 和隐藏目录
+        dirs[:] = [d for d in dirs if not d.startswith('.')]
         for file in files:
             if file.startswith(".") or file == "README.md" or file == "LICENSE":
                 continue

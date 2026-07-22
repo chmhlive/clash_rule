@@ -1,0 +1,60 @@
+payload:
+
+    # pornhub
+
+    - '+.pornhub.*' 
+
+    - '+.phncdn.com'                              
+    - '+.phprcdn.com'           
+
+    - '+.pornhubpremium.com'  
+    - '+.pronstore.com'                           
+
+    - '+.pornhubapparel.com'
+    - '+.pornhub-deutsch.net'
+
+
+    # 以下 是一些常用的 AV站 可以在线点播的
+
+    # missav
+    
+    - '+.avmiss.*'
+
+    - '+.missav.*'
+
+    - '+.myavlive.com'
+    - '+.*-missav.recombee.com'
+    - '+.xxxvjmp.com'
+    - '+.xxxivjmp.com'
+
+    - '+.mavrtracktor.com'
+    - '+.*hls.saawsedge.com'
+    - '+.nineyu.com'
+    - '+.surrit.com'
+
+    - '+.hotzcam.com'
+
+
+    # CartoonAV \ AV动画片
+
+    - '+.e-hentai.org'
+
+    - '+.hanime.*'
+    - '+.hanime1.*'
+    - '+.hanimeone.*'
+
+   #- '+.hanime1.me'
+   #- '+.hanime1.com'
+   #- '+.hanimeone.me'
+
+
+    - '+.hembed.com'
+   #- '+.vdownload.hembed.com'
+   
+    - '+.kbnmnl.com'
+   #- '+.creative.kbnmnl.com'
+
+    - '+.surrit.com'
+    - '+.img.doppiocdn.com'
+    - '+.cdn.impactserving.com'
+

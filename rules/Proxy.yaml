@@ -1,0 +1,10 @@
+# --- Custom Rules Start ---
+payload:
+  # 个人自定义代理规则示例
+  - DOMAIN-SUFFIX,example.com
+
+# --- Custom Rules End ---
+
+payload:
+  # 个人自定义代理规则示例
+  - DOMAIN-SUFFIX,example.com
