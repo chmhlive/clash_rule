@@ -41,21 +41,29 @@ def run_git_clone(repo_url, target_dir):
         print(f"[Error] Failed to clone {repo_url}: {e}")
         return False
 
-def copy_files_recursive(src_dir, dst_dir):
-    """递归复制文件，同名覆盖（过滤 .git 及隐藏目录）"""
+def copy_files_recursive(src_dir, dst_dir, is_accademia=False):
+    """递归复制文件，同名覆盖（过滤 .git 及隐藏目录，支持 README.md 合并）"""
     count = 0
     for root, dirs, files in os.walk(src_dir):
         # 排除 .git 和隐藏目录
         dirs[:] = [d for d in dirs if not d.startswith('.')]
         for file in files:
-            if file.startswith(".") or file == "README.md" or file == "LICENSE":
+            if file.startswith(".") or file == "LICENSE":
                 continue
             src_file = os.path.join(root, file)
             rel_path = os.path.relpath(src_file, src_dir)
             dst_file = os.path.join(dst_dir, rel_path)
             
             os.makedirs(os.path.dirname(dst_file), exist_ok=True)
-            shutil.copy2(src_file, dst_file)
+            
+            # 特殊处理根目录的 README.md (如果是 Accademia 并且目标 rules/README.md 已存在，则进行底部追加合并)
+            if is_accademia and rel_path == "README.md" and os.path.exists(dst_file):
+                print("---> 合并 Accademia 根目录 README.md 至 rules/README.md 底部")
+                with open(src_file, 'r', encoding='utf-8') as sf, open(dst_file, 'a', encoding='utf-8') as df:
+                    df.write("\n\n---\n# 🔴 🟡 🟢 Accademia / Additional_Rule_For_Clash 补充规则说明\n\n")
+                    df.write(sf.read())
+            else:
+                shutil.copy2(src_file, dst_file)
             count += 1
     return count
 
@@ -76,7 +84,7 @@ def process_accademia():
     print("===> 2. 正在拉取 Accademia/Additional_Rule_For_Clash 规则 (精修/补充层)...")
     ac_dir = os.path.join(TEMP_DIR, "accademia")
     if run_git_clone(ACCADEMIA_URL, ac_dir):
-        count = copy_files_recursive(ac_dir, RULES_DIR)
+        count = copy_files_recursive(ac_dir, RULES_DIR, is_accademia=True)
         print(f"===> Accademia 完成，共覆盖/新增 {count} 个文件。")
 
 def process_custom():
