@@ -48,7 +48,7 @@ jobs:
       - name: Purge jsDelivr CDN Cache
         run: |
           echo "===> 正在并发 (10 线程) 刷新 rules/ 目录下所有 .yaml 规则文件的 jsDelivr CDN 全球缓存..."
-          find rules/ -type f -name "*.yaml" | xargs -n 1 -P 10 -I {} sh -c 'curl -s "https://purge.jsdelivr.net/gh/${{ github.repository }}@main/{}" > /dev/null || true'
+          find rules/ -type f -name "*.yaml" -print0 | xargs -0 -P 10 -I {} sh -c 'curl -s "https://purge.jsdelivr.net/gh/${{ github.repository }}@main/{}" > /dev/null || true'
           echo "===> 所有 .yaml 规则文件的 CDN 缓存刷新请求已全部并发完成！"
 
 
