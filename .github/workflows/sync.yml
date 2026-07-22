@@ -6,6 +6,9 @@ on:
     - cron: '0 0 * * 1'
   workflow_dispatch: # 支持在 GitHub Actions 页面手动点击按钮随时触发更新
 
+permissions:
+  contents: write
+
 jobs:
   build-and-sync:
     runs-on: ubuntu-latest
@@ -34,3 +37,4 @@ jobs:
             git commit -m "chore(sync): 自动合并更新 Clash 规则 [周度例行更新]"
             git push
           fi
+
