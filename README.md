@@ -36,36 +36,48 @@
 
 ## 🔗 Clash / Stash 客户端订阅地址
 
-在你的 Clash / Stash 配置文件中，直接使用 RAW 链接进行规则引用：
+可以使用以下两种方式进行订阅：
+
+### 方式一：jsDelivr CDN 全球免费加速订阅（推荐）
+适用于网络连通性较差的环境，通过 CDN 加速获取最新规则：
 
 ```yaml
 rule-providers:
-  # 示例 1: 引用精修版的中国域名分流规则
+  # 示例 1: 引用精修版的中国域名分流规则 (jsDelivr CDN)
   China:
     type: http
     behavior: domain
-    url: "https://raw.githubusercontent.com/<你的GitHub用户名>/clash_rule/main/rules/China.yaml"
+    url: "https://cdn.jsdelivr.net/gh/chmhlive/clash_rule@main/rules/China.yaml"
     path: ./rules/China.yaml
     interval: 86400
 
-  # 示例 2: 引用 AppleAI 分流规则
+  # 示例 2: 引用 AppleAI 分流规则 (jsDelivr CDN)
   AppleAI:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/<你的GitHub用户名>/clash_rule/main/rules/AppleAI.yaml"
+    url: "https://cdn.jsdelivr.net/gh/chmhlive/clash_rule@main/rules/AppleAI.yaml"
     path: ./rules/AppleAI.yaml
-    interval: 86400
-
-  # 示例 3: 引用你个人自定义的 Direct 直连规则
-  MyDirect:
-    type: http
-    behavior: classical
-    url: "https://raw.githubusercontent.com/<你的GitHub用户名>/clash_rule/main/rules/Direct.yaml"
-    path: ./rules/Direct.yaml
     interval: 86400
 ```
 
-> 💡 **提示**：请将 URL 中的 `<你的GitHub用户名>` 替换为你实际的 GitHub 账号名称。
+### 方式二：GitHub Raw 直连订阅
+
+```yaml
+rule-providers:
+  China:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/chmhlive/clash_rule/main/rules/China.yaml"
+    path: ./rules/China.yaml
+    interval: 86400
+
+  AppleAI:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/chmhlive/clash_rule/main/rules/AppleAI.yaml"
+    path: ./rules/AppleAI.yaml
+    interval: 86400
+```
 
 ---
 

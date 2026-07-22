@@ -45,4 +45,13 @@ jobs:
             git push "https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git" HEAD:main
           fi
 
+      - name: Purge jsDelivr CDN Cache
+        run: |
+          echo "===> 正在刷新 jsDelivr CDN 全球缓存..."
+          curl -s -i "https://purge.jsdelivr.net/gh/${{ github.repository }}@main/rules/China.yaml" || true
+          curl -s -i "https://purge.jsdelivr.net/gh/${{ github.repository }}@main/rules/ChinaMax.yaml" || true
+          curl -s -i "https://purge.jsdelivr.net/gh/${{ github.repository }}@main/rules/AppleAI.yaml" || true
+          curl -s -i "https://purge.jsdelivr.net/gh/${{ github.repository }}@main/rules/Direct.yaml" || true
+
+
 
