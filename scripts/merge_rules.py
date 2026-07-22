@@ -30,16 +30,21 @@ def clean_dir(directory):
         shutil.rmtree(directory, ignore_errors=True)
     os.makedirs(directory, exist_ok=True)
 
-def run_git_clone(repo_url, target_dir):
-    """使用 git clone --depth 1 快速克隆仓库"""
-    clean_dir(target_dir)
-    cmd = ["git", "clone", "--depth", "1", repo_url, target_dir]
-    try:
-        subprocess.run(cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-        return True
-    except subprocess.CalledProcessError as e:
-        print(f"[Error] Failed to clone {repo_url}: {e}")
-        return False
+def run_git_clone(repo_url, target_dir, max_retries=3):
+    """使用 git clone --depth 1 快速克隆仓库（带网络重试机制）"""
+    import time
+    for attempt in range(1, max_retries + 1):
+        clean_dir(target_dir)
+        cmd = ["git", "clone", "--depth", "1", repo_url, target_dir]
+        try:
+            subprocess.run(cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            return True
+        except subprocess.CalledProcessError as e:
+            print(f"[Warning] Failed to clone {repo_url} (Attempt {attempt}/{max_retries})")
+            if attempt < max_retries:
+                time.sleep(2)
+    print(f"[Error] Permanently failed to clone {repo_url} after {max_retries} attempts.")
+    return False
 
 def copy_files_recursive(src_dir, dst_dir, is_accademia=False):
     """递归复制文件，同名覆盖（过滤 .git 及隐藏目录，支持 README.md 合并）"""
@@ -158,7 +163,8 @@ def process_custom():
 
 def main():
     print("=== 开始运行 Clash 规则合并逻辑 ===")
-    os.makedirs(RULES_DIR, exist_ok=True)
+    # 每次构建前彻底清空 rules 目录，确保无状态干净构建 (Clean Build)
+    clean_dir(RULES_DIR)
     
     try:
         process_blackmatrix7()
