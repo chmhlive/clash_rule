@@ -1,0 +1,4 @@
+payload:
+  # 个人自定义直连规则示例
+  - DOMAIN-SUFFIX,local
+  - DOMAIN-KEYWORD,lan

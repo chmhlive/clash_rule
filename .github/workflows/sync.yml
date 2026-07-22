@@ -1,0 +1,36 @@
+name: Weekly Clash Rule Merge Sync
+
+on:
+  schedule:
+    # 每周一 00:00 UTC (北京时间 周一 08:00) 自动触发运行
+    - cron: '0 0 * * 1'
+  workflow_dispatch: # 支持在 GitHub Actions 页面手动点击按钮随时触发更新
+
+jobs:
+  build-and-sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Run rule merge script
+        run: |
+          python scripts/merge_rules.py
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add rules/
+          if git diff --staged --quiet; then
+            echo "没有规则更新，跳过 Commit。"
+          else
+            git commit -m "chore(sync): 自动合并更新 Clash 规则 [周度例行更新]"
+            git push
+          fi
