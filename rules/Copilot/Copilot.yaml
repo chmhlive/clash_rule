@@ -1,3 +1,9 @@
+# --- Custom Rules Start ---
+payload:
+  - DOMAIN,eu-mobile.events.data.microsoft.com
+
+# --- Custom Rules End ---
+
 payload:
 
    # —— 消费版 Copilot（Web）——

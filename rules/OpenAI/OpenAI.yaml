@@ -1,3 +1,10 @@
+# --- Custom Rules Start ---
+payload:
+  # -- ChatGPT (OpenAI)
+  - DOMAIN-SUFFIX,oaistatic.co
+
+# --- Custom Rules End ---
+
 # NAME: OpenAI
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script

@@ -1,3 +1,10 @@
+# --- Custom Rules Start ---
+payload:
+  # -- Meta / Facebook
+  - DOMAIN-SUFFIX,meta.ai
+
+# --- Custom Rules End ---
+
 # NAME: Facebook
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script

@@ -1,3 +1,12 @@
+# --- Custom Rules Start ---
+payload:
+  # -- Cloudflare / CDN (直连)
+  - DOMAIN-SUFFIX,cloudfront.net
+  - DOMAIN-SUFFIX,jsdelivr.net
+  - DOMAIN-SUFFIX,jsdelivr.com
+
+# --- Custom Rules End ---
+
 # NAME: Cloudflare
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script

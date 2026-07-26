@@ -1,3 +1,15 @@
+# --- Custom Rules Start ---
+payload:
+  # -- 谷歌服务 (Google Service)
+  - PROCESS-NAME,Antigravity.exe
+  - DOMAIN-SUFFIX,gvt1.com
+  - DOMAIN-SUFFIX,antigravity-unleash.goog
+  - DOMAIN-SUFFIX,coo.gle
+  - DOMAIN-SUFFIX,googlevideo.com
+  - IP-CIDR,216.239.36.223/32,no-resolve
+
+# --- Custom Rules End ---
+
 # NAME: Google
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
