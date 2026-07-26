@@ -1,10 +1,3 @@
-# --- Custom Rules Start ---
-payload:
-  # -- claude (Anthropic / Claude)
-  - DOMAIN-SUFFIX,claude.com
-
-# --- Custom Rules End ---
-
 # NAME: Claude
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
@@ -13,6 +6,11 @@ payload:
 # DOMAIN-SUFFIX: 2
 # TOTAL: 3
 payload:
+  # --- Custom Rules Start (Claude/Claude.yaml) ---
+  # -- claude (Anthropic / Claude)
+  - DOMAIN-SUFFIX,claude.com
+  
+  # --- Custom Rules End ---
   - DOMAIN,cdn.usefathom.com
   - DOMAIN-SUFFIX,anthropic.com
   - DOMAIN-SUFFIX,claude.ai
