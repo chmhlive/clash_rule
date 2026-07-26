@@ -154,7 +154,7 @@ def process_custom():
                 print(f"---> 合并自定义规则到现有规则: {rel_path}")
                 with open(src_path, 'r', encoding='utf-8') as sf:
                     custom_content = sf.read()
-                with open(dest_path, 'r+', encoding='utf-8') as df:
+                with open(dest_path, 'r', encoding='utf-8') as df:
                     original_content = df.read()
 
                 # 提取 custom 文件中的规则条目（去掉 payload 头，只取规则行）
@@ -162,9 +162,8 @@ def process_custom():
 
                 if custom_rules:
                     merged = _merge_into_payload(original_content, custom_rules, rel_path)
-                    df.seek(0, 0)
-                    df.write(merged)
-                    df.truncate()
+                    with open(dest_path, 'w', encoding='utf-8') as df:
+                        df.write(merged)
                 else:
                     print(f"   [警告] {rel_path} 中未找到有效规则条目，跳过合并")
             else:
