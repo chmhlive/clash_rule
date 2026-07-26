@@ -1,0 +1,17 @@
+payload:
+  # -- AI_API
+  # Windows / Bing
+  - DOMAIN-SUFFIX,vscode.dev
+  # -- others
+  - DOMAIN-KEYWORD,groq
+  - DOMAIN-SUFFIX,manus.im
+  - DOMAIN-SUFFIX,aerolink.lat
+  - DOMAIN-SUFFIX,deno.dev
+  - DOMAIN-SUFFIX,huggingface.co
+  - DOMAIN-SUFFIX,jina.ai
+  - DOMAIN-SUFFIX,b.ai
+  # -- AWS
+  - DOMAIN-SUFFIX,signin.aws
+  - DOMAIN-SUFFIX,awsapps.com
+  # -- Qwen
+  - DOMAIN-SUFFIX,qwen.ai

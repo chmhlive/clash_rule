@@ -1,0 +1,3 @@
+payload:
+  # -- claude (Anthropic / Claude)
+  - DOMAIN-SUFFIX,claude.com

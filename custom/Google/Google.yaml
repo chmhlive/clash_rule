@@ -1,0 +1,8 @@
+payload:
+  # -- 谷歌服务 (Google Service)
+  - PROCESS-NAME,Antigravity.exe
+  - DOMAIN-SUFFIX,gvt1.com
+  - DOMAIN-SUFFIX,antigravity-unleash.goog
+  - DOMAIN-SUFFIX,coo.gle
+  - DOMAIN-SUFFIX,googlevideo.com
+  - IP-CIDR,216.239.36.223/32,no-resolve

@@ -1,0 +1,26 @@
+payload:
+  # --DOMAIN-KEYWORD
+  - DOMAIN-KEYWORD,kicad
+  - DOMAIN-KEYWORD,quickconnect
+  # --DOMAIN-SUFFIX
+  - DOMAIN-SUFFIX,edisk.top
+  - DOMAIN-SUFFIX,arc.net
+  - DOMAIN-SUFFIX,imcu.uk
+  - DOMAIN-SUFFIX,roocode.com
+  - DOMAIN-SUFFIX,spaceship.com
+  - DOMAIN-SUFFIX,nordicsemi.com
+  - DOMAIN-SUFFIX,paypal.com
+  - DOMAIN-SUFFIX,myds.me
+  - DOMAIN-SUFFIX,asus.com
+  - DOMAIN-SUFFIX,fonts.com
+  - DOMAIN-SUFFIX,fonts.net
+  - DOMAIN-SUFFIX,immersivetranslate.com
+  - DOMAIN-SUFFIX,nvidia.com
+  - DOMAIN-SUFFIX,files.pythonhosted.org
+  - DOMAIN-SUFFIX,zijieapi.com
+  - DOMAIN-SUFFIX,log.snssdk.com
+  - DOMAIN-SUFFIX,teamviewer.com
+  - DOMAIN-SUFFIX,teamviewer.scene7.com
+  - DOMAIN,release-assets.githubusercontent.com
+  # -- IP-CIDR
+  - IP-CIDR,183.239.156.67/8,no-resolve

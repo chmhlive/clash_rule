@@ -1,0 +1,3 @@
+payload:
+  # -- Microsoft Edge (走 AI 节点)
+  - DOMAIN-SUFFIX,msedge.net

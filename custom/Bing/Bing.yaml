@@ -1,0 +1,3 @@
+payload:
+  # -- Bing Search (走 AI 节点)
+  - DOMAIN-SUFFIX,bingapis.com

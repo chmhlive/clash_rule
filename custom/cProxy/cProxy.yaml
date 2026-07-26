@@ -1,0 +1,26 @@
+payload:
+  # -- 节点选择 (Node Selection)
+  - DOMAIN-SUFFIX,linux.do
+  - DOMAIN-SUFFIX,shadowsocks.au
+  - DOMAIN-SUFFIX,anyway.best
+  - DOMAIN-SUFFIX,metacubex.one
+  - DOMAIN-SUFFIX,synologydownload.com
+  - DOMAIN-SUFFIX,realtek.com
+  - DOMAIN-SUFFIX,sourceforge.net
+  - DOMAIN-SUFFIX,packagecontrol.io
+  - DOMAIN-SUFFIX,gofrp.org
+  - DOMAIN-SUFFIX,vunun.com
+  - DOMAIN-SUFFIX,clashverge.dev
+  - DOMAIN-SUFFIX,freewhale.vip
+  - DOMAIN-SUFFIX,xn--4gq62f52gdss.ink
+  - DOMAIN-SUFFIX,xn--4gq62f52gdss.com
+  - DOMAIN-SUFFIX,annas-archive.org
+  - DOMAIN-SUFFIX,v2rayse.com
+  - DOMAIN-SUFFIX,xn--5hqx9equq.com
+  - DOMAIN-SUFFIX,nfpmotor.com
+  - DOMAIN-SUFFIX,52pokemon66.cc
+  - DOMAIN-SUFFIX,trojanflare.one
+
+  - DOMAIN-SUFFIX,apt.kitware.com
+  - DOMAIN-SUFFIX,alienth.cn
+  - DOMAIN-SUFFIX,gitlab.com

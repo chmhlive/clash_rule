@@ -1,0 +1,5 @@
+payload:
+  # -- Cloudflare / CDN (直连)
+  - DOMAIN-SUFFIX,cloudfront.net
+  - DOMAIN-SUFFIX,jsdelivr.net
+  - DOMAIN-SUFFIX,jsdelivr.com
