@@ -203,9 +203,9 @@ const ruleProviders = {
 // 规则 
 const rules = [  
   // 规则集
-  "RULE-SET,cai,cAI",  
-  "RULE-SET,cdirect,cDirect", 
-  "RULE-SET,cproxy,cProxy",     
+  "RULE-SET,cai,AI_API",  
+  "RULE-SET,cdirect,全局直连", 
+  "RULE-SET,cproxy,节点选择",     
   "RULE-SET,prevent_dns_leak,DNS定位",
   "RULE-SET,reject,广告过滤",
   "RULE-SET,githubsrv,GitHubSrv",
@@ -306,30 +306,6 @@ function main(config) {
       "strategy": "round-robin",
       "include-all": true,
       "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/balance.svg"
-    },
-    {
-      ...groupBaseOption,
-      "name": "cAI",
-      "type": "select",
-      "proxies": ["AI_API", "节点选择", "延迟选优", "故障转移", "负载均衡(散列)", "负载均衡(轮询)", "全局直连"],
-      "include-all": true,
-      "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/android.svg"
-    },
-    {
-      ...groupBaseOption,
-      "name": "cDirect",
-      "type": "select",
-      "proxies": ["全局直连", "节点选择", "延迟选优", "故障转移", "负载均衡(散列)", "负载均衡(轮询)", "AI_API"],
-      "include-all": true,
-      "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/link.svg"
-    },
-    {
-      ...groupBaseOption,
-      "name": "cProxy",
-      "type": "select",
-      "proxies": ["节点选择", "延迟选优", "故障转移", "负载均衡(散列)", "负载均衡(轮询)", "AI_API", "全局直连"],
-      "include-all": true,
-      "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/adjust.svg"
     },
     {
       ...groupBaseOption,
