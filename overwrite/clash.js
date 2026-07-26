@@ -158,16 +158,16 @@ const ruleProviders = {
   },  
   "xaigrok": {
     ...ruleProviderCommon,
-    "behavior": "domain",
-    "url": "https://cdn.jsdelivr.net/gh/chmhlive/clash_rule@main/rules/Grok/Grok_Domain.yaml",
-    "path": "./ruleset/chmhlive/grok_domain.yaml"
+    "behavior": "classical",
+    "url": "https://cdn.jsdelivr.net/gh/chmhlive/clash_rule@main/rules/Grok/Grok.yaml",
+    "path": "./ruleset/chmhlive/grok.yaml"
   },
   "prevent_dns_leak": {
     ...ruleProviderCommon,
-    "behavior": "domain",
-    "format": "text",
-    "url": "https://raw.githubusercontent.com/xishang0128/rules/main/clash%20or%20stash/prevent_dns_leak/prevent_dns_leak_domain.list",
-    "path": "./ruleset/xishang0128/prevent_dns_leak_domain.yaml"
+    "behavior": "classical",
+    "format": "yaml",
+    "url": "https://cdn.jsdelivr.net/gh/chmhlive/clash_rule@main/rules/prevent_dns_leak/prevent_dns_leak.yaml",
+    "path": "./ruleset/chmhlive/prevent_dns_leak.yaml"
   },
   "openai": {
     ...ruleProviderCommon,
@@ -354,7 +354,7 @@ function main(config) {
       ...groupBaseOption,
       "name": "xAIGrok",
       "type": "select",
-      "proxies": ["节点选择", "延迟选优", "故障转移", "负载均衡(散列)", "负载均衡(轮询)", "AI_API", "全局直连"],
+      "proxies": ["AI_API", "节点选择", "延迟选优", "故障转移", "负载均衡(散列)", "负载均衡(轮询)", "全局直连"],
       "include-all": true,
       "icon": "https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/dark/xai.png"
     }, 
@@ -362,7 +362,7 @@ function main(config) {
       ...groupBaseOption,
       "name": "Meta",
       "type": "select",
-      "proxies": ["节点选择", "延迟选优", "故障转移", "负载均衡(散列)", "负载均衡(轮询)", "AI_API", "全局直连"],
+      "proxies": ["AI_API", "节点选择", "延迟选优", "故障转移", "负载均衡(散列)", "负载均衡(轮询)", "全局直连"],
       "include-all": true,
       "icon": "https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/dark/meta-color.png"
     },                  
@@ -394,7 +394,7 @@ function main(config) {
       ...groupBaseOption,
       "name": "微软OneDrive",
       "type": "select",
-      "proxies": ["AI_API", "全局直连", "节点选择", "延迟选优", "故障转移", "负载均衡(散列)", "负载均衡(轮询)"],
+      "proxies": ["全局直连", "AI_API", "节点选择", "延迟选优", "故障转移", "负载均衡(散列)", "负载均衡(轮询)"],
       "include-all": true,
       "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/onedrive.svg"
     },  
@@ -402,7 +402,7 @@ function main(config) {
       ...groupBaseOption,
       "name": "微软服务",
       "type": "select",
-      "proxies": ["AI_API", "全局直连", "节点选择", "延迟选优", "故障转移", "负载均衡(散列)", "负载均衡(轮询)"],
+      "proxies": ["全局直连", "AI_API", "节点选择", "延迟选优", "故障转移", "负载均衡(散列)", "负载均衡(轮询)"],
       "include-all": true,
       "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/microsoft.svg"
     },      
@@ -410,7 +410,7 @@ function main(config) {
       ...groupBaseOption,
       "name": "Cloudflare",
       "type": "select",
-      "proxies": ["节点选择", "延迟选优", "故障转移", "负载均衡(散列)", "负载均衡(轮询)", "AI_API", "全局直连"],
+      "proxies": ["全局直连", "节点选择", "延迟选优", "故障转移", "负载均衡(散列)", "负载均衡(轮询)", "AI_API"],
       "include-all": true,
       "icon": "https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/dark/cloudflare-color.png"
     },    
