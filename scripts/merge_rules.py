@@ -11,6 +11,7 @@ Clash 规则定时合并脚本 (merge_rules.py)
 """
 
 import os
+import re
 import shutil
 import subprocess
 
@@ -128,7 +129,10 @@ def process_accademia():
     print(f"===> Accademia 完成，共处理/替换 {count} 个目录及根文件。")
 
 def process_custom():
-    """处理个人自定义规则 (最高优先级)"""
+    """处理个人自定义规则 (最高优先级)
+    同名文件：提取 custom 中的规则条目，插入上游 payload 列表头部（而非重复 payload 块）
+    非同文件：直接拷贝到 rules/ 目录
+    """
     print("===> 3. 正在叠加 custom/ 个人自定义规则...")
     if not os.path.exists(CUSTOM_DIR):
         print("===> custom 目录不存在，跳过。")
@@ -139,27 +143,73 @@ def process_custom():
         for file in files:
             if file == "README.md" or file.startswith("."):
                 continue
-            
+
             src_path = os.path.join(root, file)
             rel_path = os.path.relpath(src_path, CUSTOM_DIR)
             dest_path = os.path.join(RULES_DIR, rel_path)
-            
+
             os.makedirs(os.path.dirname(dest_path), exist_ok=True)
-            
-            # 如果目标已存在同名规则，在文件头部追加自定义规则
+
             if os.path.exists(dest_path):
-                print(f"---> 追加自定义内容到现有规则: {rel_path}")
-                with open(src_path, 'r', encoding='utf-8') as sf, open(dest_path, 'r+', encoding='utf-8') as df:
+                print(f"---> 合并自定义规则到现有规则: {rel_path}")
+                with open(src_path, 'r', encoding='utf-8') as sf:
                     custom_content = sf.read()
+                with open(dest_path, 'r+', encoding='utf-8') as df:
                     original_content = df.read()
+
+                # 提取 custom 文件中的规则条目（去掉 payload 头，只取规则行）
+                custom_rules = _extract_rules(custom_content)
+
+                if custom_rules:
+                    merged = _merge_into_payload(original_content, custom_rules, rel_path)
                     df.seek(0, 0)
-                    df.write(f"# --- Custom Rules Start ---\n{custom_content}\n# --- Custom Rules End ---\n\n" + original_content)
+                    df.write(merged)
                     df.truncate()
+                else:
+                    print(f"   [警告] {rel_path} 中未找到有效规则条目，跳过合并")
             else:
                 print(f"---> 新增个人独立规则: {rel_path}")
                 shutil.copy2(src_path, dest_path)
             count += 1
     print(f"===> 个人自定义规则处理完成，共处理 {count} 个文件。")
+
+
+def _extract_rules(content):
+    """从 yaml content 中提取 payload 下的规则条目列表（不含 payload 头）"""
+    lines = []
+    in_payload = False
+    for line in content.split('\n'):
+        stripped = line.strip()
+        if stripped == 'payload:' or stripped.startswith('payload:'):
+            in_payload = True
+            continue
+        if in_payload:
+            if stripped.startswith('- ') and not stripped.startswith('- #'):
+                lines.append('  ' + stripped)
+            elif stripped == '' or stripped.startswith('#'):
+                lines.append('  ' + stripped)
+            elif stripped.startswith('- #'):
+                lines.append('  ' + stripped)
+    return lines
+
+
+def _merge_into_payload(original, custom_rules, rel_path):
+    """将 custom_rules 插入到 original 文件的 payload 列表头部"""
+    marker = f"# --- Custom Rules Start ({rel_path}) ---"
+    end_marker = "# --- Custom Rules End ---"
+
+    payload_match = re.search(r'^payload:', original, re.MULTILINE)
+    if not payload_match:
+        print(f"   [警告] 目标规则 {rel_path} 中未找到 payload 字段，改为追加")
+        header = f"\n{marker}\n"
+        return original.rstrip() + '\n\n' + header + '\n'.join(custom_rules) + '\n' + end_marker + '\n'
+
+    insert_pos = payload_match.end()
+    insertion = f"\n  {marker}\n"
+    insertion += '\n'.join(custom_rules) + '\n'
+    insertion += f"  {end_marker}"
+
+    return original[:insert_pos] + insertion + original[insert_pos:]
 
 def main():
     print("=== 开始运行 Clash 规则合并逻辑 ===")
