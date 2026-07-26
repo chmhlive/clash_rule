@@ -156,11 +156,11 @@ const ruleProviders = {
     "url": "https://cdn.jsdelivr.net/gh/chmhlive/clash_rule@main/rules/YouTube/YouTube.yaml",
     "path": "./ruleset/chmhlive/youtube.yaml"
   },  
-  "xaigrok": {
+  "cGrok": {
     ...ruleProviderCommon,
     "behavior": "classical",
-    "url": "https://cdn.jsdelivr.net/gh/chmhlive/clash_rule@main/rules/Grok/Grok.yaml",
-    "path": "./ruleset/chmhlive/grok.yaml"
+    "url": "https://cdn.jsdelivr.net/gh/chmhlive/clash_rule@main/rules/cGrok/cGrok.yaml",
+    "path": "./ruleset/chmhlive/cgrok.yaml"
   },
   "prevent_dns_leak": {
     ...ruleProviderCommon,
@@ -223,7 +223,7 @@ const rules = [
   "RULE-SET,youtube,谷歌媒体", 
   "RULE-SET,google,谷歌服务",
   "RULE-SET,facebook_meta,Meta",
-  "RULE-SET,xaigrok,xAIGrok",
+  "RULE-SET,cGrok,xAIGrok",
   "GEOSITE,telegram,电报消息",   
   "GEOSITE,private,全局直连",
   "GEOSITE,cn,全局直连",
