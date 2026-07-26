@@ -309,6 +309,30 @@ function main(config) {
     },
     {
       ...groupBaseOption,
+      "name": "cAI",
+      "type": "select",
+      "proxies": ["AI_API", "节点选择", "延迟选优", "故障转移", "负载均衡(散列)", "负载均衡(轮询)", "全局直连"],
+      "include-all": true,
+      "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/android.svg"
+    },
+    {
+      ...groupBaseOption,
+      "name": "cDirect",
+      "type": "select",
+      "proxies": ["全局直连", "节点选择", "延迟选优", "故障转移", "负载均衡(散列)", "负载均衡(轮询)", "AI_API"],
+      "include-all": true,
+      "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/link.svg"
+    },
+    {
+      ...groupBaseOption,
+      "name": "cProxy",
+      "type": "select",
+      "proxies": ["节点选择", "延迟选优", "故障转移", "负载均衡(散列)", "负载均衡(轮询)", "AI_API", "全局直连"],
+      "include-all": true,
+      "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/adjust.svg"
+    },
+    {
+      ...groupBaseOption,
       "name": "GitHubSrv",
       "type": "select",
       "proxies": ["AI_API", "节点选择", "延迟选优", "故障转移", "负载均衡(散列)", "负载均衡(轮询)", "全局直连"],
@@ -326,7 +350,7 @@ function main(config) {
     }, 
     {
       ...groupBaseOption,
-      "name": "国外媒体",
+      "name": "谷歌媒体",
       "type": "select",
       "proxies": ["节点选择", "延迟选优", "故障转移", "负载均衡(散列)", "负载均衡(轮询)", "AI_API", "全局直连"],
       "include-all": true,
@@ -368,7 +392,7 @@ function main(config) {
     },                  
     {
       ...groupBaseOption,
-      "name": "ChatCopilot",
+      "name": "微软Copilot",
       "type": "select",
       "proxies": ["AI_API", "节点选择", "延迟选优", "故障转移", "负载均衡(散列)", "负载均衡(轮询)", "全局直连"],
       "include-all": true,
