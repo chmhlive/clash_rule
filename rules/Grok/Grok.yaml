@@ -1,9 +1,4 @@
 payload:
-  # --- Custom Rules Start (Grok/Grok.yaml) ---
-  # -- xAIGrok (Grok)
-  - DOMAIN-SUFFIX,grokipedia.com
-  
-  # --- Custom Rules End ---
 
     - DOMAIN-SUFFIX   , x.ai
     - DOMAIN-SUFFIX   , grok.com
