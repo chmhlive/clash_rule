@@ -8,6 +8,7 @@ payload:
   # --- Custom Rules Start (MicrosoftEdge/MicrosoftEdge.yaml) ---
   # -- Microsoft Edge (走 AI 节点)
   - DOMAIN-SUFFIX,msedge.net
+  - DOMAIN-SUFFIX,edge.microsoft.com
   
   # --- Custom Rules End ---
   - DOMAIN,edge.activity.windows.com
