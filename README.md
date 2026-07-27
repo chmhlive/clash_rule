@@ -37,6 +37,7 @@
 | **苹果智能 (AppleAI)** | `classical` | `https://cdn.jsdelivr.net/gh/chmhlive/clash_rule@main/rules/AppleAI/AppleAI.yaml` | `https://raw.githubusercontent.com/chmhlive/clash_rule/main/rules/AppleAI/AppleAI.yaml` |
 | **xAI Grok** | `classical` | `https://cdn.jsdelivr.net/gh/chmhlive/clash_rule@main/rules/Grok/Grok.yaml` | `https://raw.githubusercontent.com/chmhlive/clash_rule/main/rules/Grok/Grok.yaml` |
 | **Google Gemini** | `classical` | `https://cdn.jsdelivr.net/gh/chmhlive/clash_rule@main/rules/Gemini/Gemini.yaml` | `https://raw.githubusercontent.com/chmhlive/clash_rule/main/rules/Gemini/Gemini.yaml` |
+| **Cloudflare CDN (自定义)** | `classical` | `https://cdn.jsdelivr.net/gh/chmhlive/clash_rule@main/rules/cCloudflare/cCloudflare.yaml` | `https://raw.githubusercontent.com/chmhlive/clash_rule/main/rules/cCloudflare/cCloudflare.yaml` |
 | **自定义直连 (Direct)** | `classical` | `https://cdn.jsdelivr.net/gh/chmhlive/clash_rule@main/rules/Direct.yaml` | `https://raw.githubusercontent.com/chmhlive/clash_rule/main/rules/Direct.yaml` |
 | **自定义代理 (Proxy)** | `classical` | `https://cdn.jsdelivr.net/gh/chmhlive/clash_rule@main/rules/Proxy.yaml` | `https://raw.githubusercontent.com/chmhlive/clash_rule/main/rules/Proxy.yaml` |
 

@@ -178,8 +178,8 @@ const ruleProviders = {
   "cloudflare": {
     ...ruleProviderCommon,
     "behavior": "classical",
-    "url": "https://cdn.jsdelivr.net/gh/chmhlive/clash_rule@main/rules/Cloudflare/Cloudflare.yaml",
-    "path": "./ruleset/chmhlive/cloudflare.yaml"
+    "url": "https://cdn.jsdelivr.net/gh/chmhlive/clash_rule@main/rules/cCloudflare/cCloudflare.yaml",
+    "path": "./ruleset/chmhlive/ccloudflare.yaml"
   },
   "cai": {
     ...ruleProviderCommon,

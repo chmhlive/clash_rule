@@ -17,16 +17,16 @@ clash_rule/
 │   ├── cAI/                   # AI 固定代理节点（日本），涵盖 AI 工具链调用域名
 │   ├── cDirect/               # 杂项直连规则
 │   ├── cProxy/                # 杂项代理规则
+│   ├── cCloudflare/           # Cloudflare CDN 直连规则（纯域名，脱离上游跟踪）
 │   ├── prevent_dns_leak/      # DNS 泄漏检测站点
 │   ├── Bing/                  # Bing 搜索补丁
 │   ├── Copilot/               # Copilot 补丁
 │   ├── MicrosoftEdge/         # Edge 浏览器补丁
-│   ├── Cloudflare/            # CDN 直连规则
 │   ├── Claude/                # Claude AI 补丁
 │   ├── OpenAI/                # OpenAI 补丁
 │   ├── Google/                # Google 服务补丁
 │   ├── Facebook/              # Meta/Facebook 补丁
-│   ├── Grok/                  # xAI/Grok 补丁
+│   ├── cGrok/                 # xAI/Grok 补丁（脱离上游跟踪）
 │   ├── Direct.yaml            # 强制直连模板
 │   └── Proxy.yaml             # 强制代理模板
 ├── scripts/
@@ -47,6 +47,7 @@ clash_rule/
 | `cAI/` | 🤖 AI_API（固定日本节点） | AI 服务及其工具链依赖（HuggingFace、Jina、Qwen 等） |
 | `cDirect/` | 🏠 全局直连 | 不需要代理的系统/工具基础设施 |
 | `cProxy/` | 🔀 节点选择 | 需要代理的杂项服务 |
+| `cCloudflare/` | 🌩️ Cloudflare（直连） | Cloudflare 自有域名及常用 CDN 域名，纯域名规则（无 IP-CIDR），脱离上游跟踪 |
 | `<Product>/` | 对应代理组 | 与上游 `rules/<Product>/` 同名的补丁，前置注入到对应规则集 |
 
 > **重要**：`cAI` 的定义是「需要走固定 AI 节点（如日本）的服务」，不单纯指 AI 产品。即使不是 AI 产品本身（如 `deno.dev`），如果被 AI 工具链调用需要特定代理，也应放在 `cAI`。
@@ -190,3 +191,11 @@ gh api /repos/chmhlive/clash_rule/contents/rules/<path>  # 查看远端文件
 python3 -c "import py_compile; py_compile.compile('scripts/merge_rules.py', doraise=True)"  # 语法检查
 grep -F "domain" rules/<Name>/<Name>.yaml | grep -v "Custom Rules"  # 查找域名
 ```
+
+## 工作流规范
+
+### 任务完成后必问
+
+每次任务（规则变更、配置修改等）全部执行完毕后，必须主动询问用户：**"是否需要提交变更并触发 GitHub Actions 工作流？"**
+
+不得自行提交或触发工作流，需等待用户明确确认。
