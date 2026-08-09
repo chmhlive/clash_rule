@@ -63,6 +63,7 @@
 | **DNS定位 / 检测 (彩色)** | `dns-color.png` | PNG | `https://cdn.jsdelivr.net/gh/chmhlive/clash_rule@main/icons/dns-color.png` | `https://raw.githubusercontent.com/chmhlive/clash_rule/main/icons/dns-color.png` |
 | **全局 / 网络** | `global.png` | PNG | `https://cdn.jsdelivr.net/gh/chmhlive/clash_rule@main/icons/global.png` | `https://raw.githubusercontent.com/chmhlive/clash_rule/main/icons/global.png` |
 | **全局 / 网络 (矢量)** | `global.svg` | SVG | `https://cdn.jsdelivr.net/gh/chmhlive/clash_rule@main/icons/global.svg` | `https://raw.githubusercontent.com/chmhlive/clash_rule/main/icons/global.svg` |
+| **全局 / 网络 (彩色)** | `global_color.png` | PNG | `https://cdn.jsdelivr.net/gh/chmhlive/clash_rule@main/icons/global_color.png` | `https://raw.githubusercontent.com/chmhlive/clash_rule/main/icons/global_color.png` |
 
 ### 🛠️ 客户端策略组 `icon` 配置范例
 

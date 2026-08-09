@@ -485,7 +485,7 @@ function main(config) {
       "type": "select",
       "proxies": ["DIRECT", "REJECT", "节点选择", "延迟选优", "故障转移", "负载均衡(散列)", "负载均衡(轮询)", "全局直连"],
       "include-all": true,
-      "icon": "https://cdn.jsdelivr.net/gh/chmhlive/clash_rule@main/icons/global.svg"
+      "icon": "https://cdn.jsdelivr.net/gh/chmhlive/clash_rule@main/icons/global_color.png"
     }
   ];
 
