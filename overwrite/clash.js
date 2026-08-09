@@ -70,7 +70,7 @@ const ruleProviderCommon = {
 //      https://cdn.jsdelivr.net/gh/chmhlive/clash_rule@main/icons/
 //
 //      https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/dark/xai.png 
-//      https://cdn.jsdelivr.net/gh/chmhlive/clash_rule@main/icons/dns.png
+//      https://cdn.jsdelivr.net/gh/chmhlive/clash_rule@main/icons/dns-color.png
 //
 
 const ruleProviders = {
@@ -454,7 +454,7 @@ function main(config) {
       "type": "select",
       "proxies": ["全局直连", "节点选择", "延迟选优", "故障转移", "负载均衡(散列)", "负载均衡(轮询)", "AI_API"],
       "include-all": true,
-      "icon": "https://cdn.jsdelivr.net/gh/chmhlive/clash_rule@main/icons/dns.png"
+      "icon": "https://cdn.jsdelivr.net/gh/chmhlive/clash_rule@main/icons/dns-color.png"
     },    
     {
       ...groupBaseOption,
@@ -485,7 +485,7 @@ function main(config) {
       "type": "select",
       "proxies": ["DIRECT", "REJECT", "节点选择", "延迟选优", "故障转移", "负载均衡(散列)", "负载均衡(轮询)", "全局直连"],
       "include-all": true,
-      "icon": "https://cdn.jsdelivr.net/gh/chmhlive/clash_rule@main/icons/global.png"
+      "icon": "https://cdn.jsdelivr.net/gh/chmhlive/clash_rule@main/icons/global.svg"
     }
   ];
 

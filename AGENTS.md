@@ -188,6 +188,12 @@ gh workflow run sync.yml --ref main            # 手动触发
 gh run view <id> --json status,conclusion      # 查看运行状态
 gh api /repos/chmhlive/clash_rule/contents/rules/<path>  # 查看远端文件
 
+# jsDelivr CDN 缓存刷新 (Purge)
+# 单文件秒级刷新（无需触发完整 CI，终端执行或浏览器直接访问）
+curl -i "https://purge.jsdelivr.net/gh/chmhlive/clash_rule@main/overwrite/clash.js"
+curl -i "https://purge.jsdelivr.net/gh/chmhlive/clash_rule@main/icons/<文件名>"
+curl -i "https://purge.jsdelivr.net/gh/chmhlive/clash_rule@main/rules/<Name>/<Name>.yaml"
+
 # 本地验证
 python3 -c "import py_compile; py_compile.compile('scripts/merge_rules.py', doraise=True)"  # 语法检查
 grep -F "domain" rules/<Name>/<Name>.yaml | grep -v "Custom Rules"  # 查找域名
