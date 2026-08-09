@@ -13,6 +13,7 @@ blackmatrix7（基础层） → Accademia（补充层/同名覆盖） → custom
 ```
 clash_rule/
 ├── rules/                     # [自动生成] 合并后的最终规则，由 GitHub Actions 产出
+├── icons/                     # [手写] 策略组/节点通用图标资源（CDN 加速分发）
 ├── custom/                    # [手写] 个人自定义规则补丁（最高优先级）
 │   ├── cAI/                   # AI 固定代理节点（日本），涵盖 AI 工具链调用域名
 │   ├── cDirect/               # 杂项直连规则

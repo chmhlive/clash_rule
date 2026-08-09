@@ -43,7 +43,63 @@
 
 ---
 
-## 🔗 Clash / Stash 配置文件接入示例
+## 🎨 3. 图标资源分发与使用说明 (Icons)
+
+本仓库在 `icons/` 目录下托管常用策略组与 DNS 图标，可供 Mihomo / ClashParty / Clash Verge 等客户端直接引用。
+
+### 📌 图标分发构造规则
+
+* **jsDelivr CDN 全球免费加速（推荐）**：
+  `https://cdn.jsdelivr.net/gh/chmhlive/clash_rule@main/icons/<文件名>`
+* **GitHub Raw 直连**：
+  `https://raw.githubusercontent.com/chmhlive/clash_rule/main/icons/<文件名>`
+
+### 📋 内置图标对照表
+
+| 图标用途 | 文件名 | 格式 | jsDelivr CDN 加速地址（推荐） | GitHub Raw 直连地址 |
+| :--- | :--- | :--- | :--- | :--- |
+| **DNS定位 / 检测** | `dns.png` | PNG | `https://cdn.jsdelivr.net/gh/chmhlive/clash_rule@main/icons/dns.png` | `https://raw.githubusercontent.com/chmhlive/clash_rule/main/icons/dns.png` |
+| **DNS定位 / 检测 (矢量)** | `dns.svg` | SVG | `https://cdn.jsdelivr.net/gh/chmhlive/clash_rule@main/icons/dns.svg` | `https://raw.githubusercontent.com/chmhlive/clash_rule/main/icons/dns.svg` |
+| **DNS定位 / 检测 (彩色)** | `dns-color.png` | PNG | `https://cdn.jsdelivr.net/gh/chmhlive/clash_rule@main/icons/dns-color.png` | `https://raw.githubusercontent.com/chmhlive/clash_rule/main/icons/dns-color.png` |
+| **全局 / 网络** | `global.png` | PNG | `https://cdn.jsdelivr.net/gh/chmhlive/clash_rule@main/icons/global.png` | `https://raw.githubusercontent.com/chmhlive/clash_rule/main/icons/global.png` |
+| **全局 / 网络 (矢量)** | `global.svg` | SVG | `https://cdn.jsdelivr.net/gh/chmhlive/clash_rule@main/icons/global.svg` | `https://raw.githubusercontent.com/chmhlive/clash_rule/main/icons/global.svg` |
+
+### 🛠️ 客户端策略组 `icon` 配置范例
+
+在 Mihomo Party 覆写脚本（`clash.js`）或策略组配置中，若需替换原有第三方链接，请参考以下范例：
+
+```javascript
+// ❌ 替换前（使用外部第三方文档站点图标）:
+{
+  "name": "DNS定位",
+  "type": "select",
+  "proxies": ["全局直连", "节点选择", "延迟选优", "故障转移", "负载均衡(散列)", "负载均衡(轮询)", "AI_API"],
+  "include-all": true,
+  "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/assemblyai-color.svg"
+}
+
+// ✅ 替换后 - 推荐方式：使用本仓库 jsDelivr CDN 全球加速:
+{
+  "name": "DNS定位",
+  "type": "select",
+  "proxies": ["全局直连", "节点选择", "延迟选优", "故障转移", "负载均衡(散列)", "负载均衡(轮询)", "AI_API"],
+  "include-all": true,
+  "icon": "https://cdn.jsdelivr.net/gh/chmhlive/clash_rule@main/icons/dns.png"
+}
+
+// 🌐 替换后 - 备用方式：使用 GitHub Raw 直连:
+{
+  "name": "DNS定位",
+  "type": "select",
+  "proxies": ["全局直连", "节点选择", "延迟选优", "故障转移", "负载均衡(散列)", "负载均衡(轮询)", "AI_API"],
+  "include-all": true,
+  "icon": "https://raw.githubusercontent.com/chmhlive/clash_rule/main/icons/dns.png"
+}
+```
+
+---
+
+## 🔗 4. Clash / Stash 配置文件接入示例
 
 在你的 Clash / Stash 配置文件中，可以按照如下示范进行引用：
 
@@ -89,26 +145,30 @@ rule-providers:
 
 ---
 
-## ⏰ 更新频率与手动触发更新
+## ⏰ 5. 更新频率与手动触发更新
 
 * **每周定时自动同步**：每周一 00:00 UTC（北京时间每周一 08:00），GitHub Actions 会自动触发 Python 脚本，拉取上游最新规则并合并发布。
 * **手动立即触发更新**：若上游有紧急更新或你刚刚修改提交了 `custom/` 规则，访问 [GitHub Actions 页面](https://github.com/chmhlive/clash_rule/actions)，点击 **`Weekly Clash Rule Merge Sync`** -> **`Run workflow`** 即可立即启动构建与 CDN 全量 Purge。
 
 ---
 
-## 📁 目录结构
+## 📁 6. 目录结构
 
 ```text
 clash_rule/
+├── icons/                  # 策略组/节点通用图标资源（CDN 加速分发）
 ├── custom/                 # 个人自定义规则（改动这里并提交即可）
 │   ├── README.md
 │   ├── Direct.yaml
 │   └── Proxy.yaml
 ├── scripts/
 │   └── merge_rules.py      # 自动拉取与合并处理脚本
+├── overwrite/
+│   └── clash.js            # ClashParty（Mihomo Party）覆写配置
 ├── .github/
 │   workflows/
 │       sync.yml            # 每周自动构建工作流与全量 CDN Purge
 ├── rules/                  # 自动生成的最终规则集合（客户端订阅此处）
 └── README.md               # 本说明文档
 ```
+

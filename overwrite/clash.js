@@ -67,8 +67,10 @@ const ruleProviderCommon = {
 
 // 图标：https://github.com/lobehub/lobe-icons
 //      https://github.com/lobehub/lobe-icons/tree/master/packages/static-png/dark
+//      https://cdn.jsdelivr.net/gh/chmhlive/clash_rule@main/icons/
 //
 //      https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/dark/xai.png 
+//      https://cdn.jsdelivr.net/gh/chmhlive/clash_rule@main/icons/dns.png
 //
 
 const ruleProviders = {
@@ -452,7 +454,7 @@ function main(config) {
       "type": "select",
       "proxies": ["全局直连", "节点选择", "延迟选优", "故障转移", "负载均衡(散列)", "负载均衡(轮询)", "AI_API"],
       "include-all": true,
-      "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/assemblyai-color.svg"
+      "icon": "https://cdn.jsdelivr.net/gh/chmhlive/clash_rule@main/icons/dns.png"
     },    
     {
       ...groupBaseOption,
@@ -476,6 +478,14 @@ function main(config) {
       "proxies": ["全局直连", "节点选择", "延迟选优", "故障转移", "负载均衡(散列)", "负载均衡(轮询)"],
       "include-all": true,
       "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/fish.svg"
+    },
+    {
+      ...groupBaseOption,
+      "name": "GLOBAL",
+      "type": "select",
+      "proxies": ["DIRECT", "REJECT", "节点选择", "延迟选优", "故障转移", "负载均衡(散列)", "负载均衡(轮询)", "全局直连"],
+      "include-all": true,
+      "icon": "https://cdn.jsdelivr.net/gh/chmhlive/clash_rule@main/icons/global.png"
     }
   ];
 
