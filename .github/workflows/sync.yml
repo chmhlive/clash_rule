@@ -1,9 +1,9 @@
-name: Weekly Clash Rule Merge Sync
+name: Monthly Clash Rule Merge Sync
 
 on:
   schedule:
-    # 每周一 00:00 UTC (北京时间 周一 08:00) 自动触发运行
-    - cron: '0 0 * * 1'
+    # 每月 1 日 00:00 UTC (北京时间 08:00) 自动触发运行
+    - cron: '0 0 1 * *'
   workflow_dispatch: # 支持在 GitHub Actions 页面手动点击按钮随时触发更新
 
 permissions:
@@ -41,7 +41,7 @@ jobs:
           if git diff --staged --quiet; then
             echo "没有规则更新，跳过 Commit。"
           else
-            git commit -m "chore(sync): 自动合并更新 Clash 规则 [周度例行更新]"
+            git commit -m "chore(sync): 自动合并更新 Clash 规则 [月度例行更新]"
             git push "https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git" HEAD:main
           fi
 
