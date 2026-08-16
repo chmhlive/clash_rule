@@ -437,7 +437,7 @@ function main(config) {
       "type": "select",
       "include-all": true,
       //"filter": "AD|🇦🇩|AE|🇦🇪|AF|🇦🇫|AG|🇦🇬|AL|🇦🇱|AM|🇦🇲|AO|🇦🇴|AR|🇦🇷|AT|🇦🇹|AU|🇦🇺|AZ|🇦🇿|BA|🇧🇦|BB|🇧🇧|BD|🇧🇩|BE|🇧🇪|BF|🇧🇫|BG|🇧🇬|BH|🇧🇭|BI|🇧🇮|BJ|🇧🇯|BN|🇧🇳|BO|🇧🇴|BR|🇧🇷|BS|🇧🇸|BT|🇧🇹|BW|🇧🇼|BZ|🇧🇿|CA|🇨🇦|CD|🇨🇩|CF|🇨🇫|CG|🇨🇬|CH|🇨🇭|CI|🇨🇮|CL|🇨🇱|CM|🇨🇲|CO|🇨🇴|CR|🇨🇷|CV|🇨🇻|CY|🇨🇾|CZ|🇨🇿|DE|🇩🇪|DJ|🇩🇯|DK|🇩🇰|DM|🇩🇲|DO|🇩🇴|DZ|🇩🇿|EC|🇪🇨|EE|🇪🇪|EG|🇪🇬|ER|🇪🇷|ES|🇪🇸|ET|🇪🇹|FI|🇫🇮|FJ|🇫🇯|FM|🇫🇲|FR|🇫🇷|GA|🇬🇦|GB|🇬🇧|GD|🇬🇩|GE|🇬🇪|GH|🇬🇭|GM|🇬🇲|GN|🇬🇳|GQ|🇬🇶|GR|🇬🇷|GT|🇬🇹|GW|🇬🇼|GY|🇬🇾|HN|🇭🇳|HR|🇭🇷|HT|🇭🇹|HU|🇭🇺|ID|🇮🇩|IE|🇮🇪|IL|🇮🇱|IN|🇮🇳|IQ|🇮🇶|IS|🇮🇸|IT|🇮🇹|JM|🇯🇲|JO|🇯🇴|JP|🇯🇵|KE|🇰🇪|KG|🇰🇬|KH|🇰🇭|KI|🇰🇮|KM|🇰🇲|KN|🇰🇳|KR|🇰🇷|KW|🇰🇼|KZ|🇰🇿|LA|🇱🇦|LB|🇱🇧|LC|🇱🇨|LI|🇱🇮|LK|🇱🇰|LR|🇱🇷|LS|🇱🇸|LT|🇱🇹|LU|🇱🇺|LV|🇱🇻|LY|🇱🇾|MA|🇲🇦|MC|🇲🇨|MD|🇲🇩|ME|🇲🇪|MG|🇲🇬|MH|🇲🇭|MK|🇲🇰|ML|🇲🇱|MM|🇲🇲|MN|🇲🇳|MR|🇲🇷|MT|🇲🇹|MU|🇲🇺|MV|🇲🇻|MW|🇲🇼|MX|🇲🇽|MY|🇲🇾|MZ|🇲🇿|NA|🇳🇦|NE|🇳🇪|NG|🇳🇬|NI|🇳🇮|NL|🇳🇱|NO|🇳🇴|NP|🇳🇵|NR|🇳🇷|NZ|🇳🇿|OM|🇴🇲|PA|🇵🇦|PE|🇵🇪|PG|🇵🇬|PH|🇵🇭|PK|🇵🇰|PL|🇵🇱|PS|🇵🇸|PT|🇵🇹|PW|🇵🇼|PY|🇵🇾|QA|🇶🇦|RO|🇷🇴|RS|🇷🇸|RW|🇷🇼|SA|🇸🇦|SB|🇸🇧|SC|🇸🇨|SD|🇸🇩|SE|🇸🇪|SG|🇸🇬|SI|🇸🇮|SK|🇸🇰|SL|🇸🇱|SM|🇸🇲|SN|🇸🇳|SO|🇸🇴|SR|🇸🇷|SS|🇸🇸|ST|🇸🇹|SV|🇸🇻|SZ|🇸🇿|TD|🇹🇩|TG|🇹🇬|TH|🇹🇭|TJ|🇹🇯|TL|🇹🇱|TM|🇹🇲|TN|🇹🇳|TO|🇹🇴|TR|🇹🇷|TT|🇹🇹|TV|🇹🇻|TW|🇹🇼|TZ|🇹🇿|UA|🇺🇦|UG|🇺🇬|US|🇺🇸|UY|🇺🇾|UZ|🇺🇿|VA|🇻🇦|VC|🇻🇨|VN|🇻🇳|VU|🇻🇺|WS|🇼🇸|YE|🇾🇪|ZA|🇿🇦|ZM|🇿🇲|ZW|🇿🇼|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|Japan|新加坡|坡|狮城|SG|Singapore|KR|Korea|KOR|首尔|韩|韓|台|新北|彰化|Taiwan|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|United States|澳大利亚|德国",
-      "filter": "JP|🇯🇵|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|Japan|US|🇺🇸|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|United States|MY",
+      "filter": "JP|🇯🇵|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|Japan|US|🇺🇸|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|United States|VPS",
       "icon": "https://cdn.jsdelivr.net/gh/chmhlive/clash_rule@main/icons/openrouter-color.png"
     },
     {
@@ -445,7 +445,7 @@ function main(config) {
       "name": "AI_LIMIT",
       "type": "select",
       "include-all": true,
-      "filter": "AU|🇦🇺|Australia|澳大利亚|澳洲|悉尼|墨尔本|Sydney|Melbourne|AT|🇦🇹|Austria|奥地利|维也纳|Vienna|BE|🇧🇪|Belgium|比利时|布鲁塞尔|Brussels|CA|🇨🇦|Canada|加拿大|温哥华|多伦多|蒙特利尔|Vancouver|Toronto|Montreal|DK|🇩🇰|Denmark|丹麦|哥本哈根|Copenhagen|FI|🇫🇮|Finland|芬兰|赫尔辛基|Helsinki|FR|🇫🇷|France|法国|巴黎|马赛|Paris|DE|🇩🇪|Germany|德国|法兰克福|柏林|慕尼黑|Frankfurt|Berlin|Munich|IS|🇮🇸|Iceland|冰岛|雷克雅未克|Reykjavik|IE|🇮🇪|Ireland|爱尔兰|都柏林|Dublin|IL|🇮🇱|Israel|以色列|特拉维夫|耶路撒冷|Tel Aviv|Jerusalem|IT|🇮🇹|Italy|意大利|罗马|米兰|Rome|Milan|LI|🇱🇮|Liechtenstein|列支敦士登|瓦杜兹|Vaduz|LU|🇱🇺|Luxembourg|卢森堡|MT|🇲🇹|Malta|马耳他|瓦莱塔|Valletta|NL|🇳🇱|Netherlands|荷兰|阿姆斯特丹|鹿特丹|Amsterdam|Rotterdam|NZ|🇳🇿|New Zealand|新西兰|奥克兰|惠灵顿|Auckland|Wellington|NO|🇳🇴|Norway|挪威|奥斯陆|Oslo|PT|🇵🇹|Portugal|葡萄牙|里斯本|波尔图|Lisbon|Porto|SG|🇸🇬|Singapore|新加坡|狮城|坡|ES|🇪🇸|Spain|西班牙|马德里|巴塞罗那|Madrid|Barcelona|SE|🇸🇪|Sweden|瑞典|斯德哥尔摩|Stockholm|CH|🇨🇭|Switzerland|瑞士|苏黎世|日内瓦|Zurich|Geneva|GB|UK|🇬🇧|United Kingdom|英国|伦敦|曼彻斯特|London|Manchester|US|USA|🇺🇸|United States|America|美国|美|纽约|洛杉矶|旧金山|硅谷|芝加哥|西雅图|达拉斯|凤凰城|费利蒙|圣何塞|圣克拉拉|波特兰|俄勒冈|拉斯维加斯|华盛顿",
+      "filter": "🇦🇺|🇦🇹|🇧🇪|🇨🇦|🇩🇰|🇫🇮|🇫🇷|🇩🇪|🇮🇸|🇮🇪|🇮🇱|🇮🇹|🇱🇮|🇱🇺|🇲🇹|🇳🇱|🇳🇿|🇳🇴|🇵🇹|🇸🇬|🇪🇸|🇸🇪|🇨🇭|🇬🇧|🇺🇸|澳大利亚|澳洲|悉尼|墨尔本|奥地利|维也纳|比利时|布鲁塞尔|加拿大|温哥华|多伦多|蒙特利尔|渥太华|丹麦|哥本哈根|芬兰|赫尔辛基|法国|巴黎|马赛|德国|法兰克福|柏林|慕尼黑|冰岛|雷克雅未克|爱尔兰|都柏林|以色列|特拉维夫|耶路撒冷|意大利|罗马|米兰|列支敦士登|瓦杜兹|卢森堡|马耳他|瓦莱塔|荷兰|阿姆斯特丹|鹿特丹|新西兰|奥克兰|惠灵顿|挪威|奥斯陆|葡萄牙|里斯本|波尔图|新加坡|狮城|西班牙|马德里|巴塞罗那|瑞典|斯德哥尔摩|瑞士|苏黎世|日内瓦|英国|伦敦|曼彻斯特|美国|纽约|洛杉矶|旧金山|硅谷|芝加哥|西雅图|达拉斯|凤凰城|费利蒙|圣何塞|圣克拉拉|波特兰|俄勒冈|拉斯维加斯|华盛顿",
       "icon": "https://cdn.jsdelivr.net/gh/chmhlive/clash_rule@main/icons/guard-color.svg"
     },    
     {
