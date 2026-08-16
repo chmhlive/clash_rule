@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Shield Gradient -->
+    <linearGradient id="shieldBg" x1="256" y1="32" x2="256" y2="480" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="50%" stop-color="#2563EB" />
+      <stop offset="100%" stop-color="#1D4ED8" />
+    </linearGradient>
+
+    <!-- Outer Border Gradient -->
+    <linearGradient id="outerBorder" x1="64" y1="32" x2="448" y2="480" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="50%" stop-color="#60A5FA" />
+      <stop offset="100%" stop-color="#0284C7" />
+    </linearGradient>
+
+    <!-- Inner Core Gradient -->
+    <linearGradient id="innerCore" x1="256" y1="100" x2="256" y2="420" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0EA5E9" />
+      <stop offset="100%" stop-color="#1E40AF" />
+    </linearGradient>
+
+    <!-- Lock/Symbol Gold Gradient -->
+    <linearGradient id="goldGradient" x1="256" y1="180" x2="256" y2="350" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FDE047" />
+      <stop offset="50%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+
+    <!-- Top Gloss Gradient -->
+    <linearGradient id="glossGrad" x1="256" y1="48" x2="256" y2="240" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.0" />
+    </linearGradient>
+
+    <!-- Shadow filter -->
+    <filter id="dropShadow" x="30" y="20" width="452" height="472" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0F172A" flood-opacity="0.45" />
+    </filter>
+  </defs>
+
+  <g filter="url(#dropShadow)">
+    <!-- Outer Shield Border -->
+    <path d="M256 40C348 40 432 72 432 72C432 232 376 384 256 464C136 384 80 232 80 72C80 72 164 40 256 40Z" 
+          fill="url(#shieldBg)" 
+          stroke="url(#outerBorder)" 
+          stroke-width="16" 
+          stroke-linejoin="round" />
+
+    <!-- Inner Shield Inset -->
+    <path d="M256 68C332 68 402 94 402 94C402 226 356 356 256 426C156 356 110 226 110 94C110 94 180 68 256 68Z" 
+          fill="url(#innerCore)" 
+          opacity="0.9" />
+
+    <!-- Gloss Highlight (Top Half) -->
+    <path d="M256 68C332 68 402 94 402 94C402 180 380 240 256 240C132 240 110 180 110 94C110 94 180 68 256 68Z" 
+          fill="url(#glossGrad)" />
+
+    <!-- Center Security Padlock Symbol -->
+    <!-- Shackle -->
+    <path d="M216 232V192C216 170 234 152 256 152C278 152 296 170 296 192V232" 
+          stroke="url(#goldGradient)" 
+          stroke-width="20" 
+          stroke-linecap="round" 
+          fill="none" />
+    
+    <!-- Lock Body -->
+    <rect x="192" y="224" width="128" height="104" rx="20" 
+          fill="url(#goldGradient)" 
+          stroke="#FDE047" 
+          stroke-width="6" />
+
+    <!-- Keyhole -->
+    <circle cx="256" cy="266" r="14" fill="#78350F" />
+    <path d="M251 274L247 298H265L261 274Z" fill="#78350F" />
+  </g>
+</svg>
