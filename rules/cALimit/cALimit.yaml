@@ -1,0 +1,6 @@
+payload:
+  # -- Freebuff / Codebuff
+  - DOMAIN-SUFFIX,freebuff.ai
+  - DOMAIN-SUFFIX,freebuff.com
+  - DOMAIN-SUFFIX,codebuff.com
+  - DOMAIN-SUFFIX,codebuff.ai
