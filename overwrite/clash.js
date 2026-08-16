@@ -5,10 +5,9 @@ const domesticNameservers = [
   "https://doh.pub/dns-query", // 腾讯DNSPod
   "https://doh.360.cn/dns-query" // 360安全DNS
 ];
-// 国外DNS服务器
+// 国外DNS服务器（保持与国内一致，预留后续扩展）
 const foreignNameservers = [
-  "https://doh.opendns.com/dns-query",
-  "https://dns.alidns.com/dns-query", // 阿里云公共DNS
+  ...domesticNameservers
 ];
 // DNS配置
 const dnsConfig = {
@@ -37,7 +36,7 @@ const dnsConfig = {
     "+.sourceforge.net",
     "+.quickconnect.cn"
   ],
-  "default-nameserver": ["223.5.5.5", "208.67.222.222", "119.29.29.29", "8.8.4.4"],
+  "default-nameserver": ["223.5.5.5", "119.29.29.29", "180.76.76.76"],
   "nameserver": [...domesticNameservers, ...foreignNameservers],
   "proxy-server-nameserver": [...domesticNameservers, ...foreignNameservers],
   "nameserver-policy": {
