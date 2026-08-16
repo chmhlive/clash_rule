@@ -4,3 +4,6 @@ payload:
   - DOMAIN-SUFFIX,freebuff.com
   - DOMAIN-SUFFIX,codebuff.com
   - DOMAIN-SUFFIX,codebuff.ai
+  # -- OpenDNS DoH
+  - IP-CIDR,146.112.41.2/32,no-resolve
+  - DOMAIN-SUFFIX,doh.opendns.com
