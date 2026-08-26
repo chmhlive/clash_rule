@@ -17,3 +17,5 @@ payload:
   - DOMAIN-SUFFIX,qwen.ai
   # -- Cerebras
   - DOMAIN-SUFFIX,cerebras.ai
+  # -- AgentRouter
+  - DOMAIN-SUFFIX,agentrouter.org
