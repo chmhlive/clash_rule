@@ -188,6 +188,12 @@ const ruleProviders = {
     "url": "https://cdn.jsdelivr.net/gh/chmhlive/clash_rule@main/rules/cAI/cAI.yaml",
     "path": "./ruleset/chmhlive/cai.yaml"
   },
+  "opencode": {
+    ...ruleProviderCommon,
+    "behavior": "classical",
+    "url": "https://cdn.jsdelivr.net/gh/chmhlive/clash_rule@main/rules/OpenCode/OpenCode.yaml",
+    "path": "./ruleset/chmhlive/opencode.yaml"
+  },
   "cdirect": {
     ...ruleProviderCommon,
     "behavior": "classical",
@@ -210,6 +216,7 @@ const ruleProviders = {
 // 规则 
 const rules = [  
   // 规则集
+  "RULE-SET,opencode,OpenCode",
   "RULE-SET,cai,AI_API",  
   "RULE-SET,cdirect,全局直连", 
   "RULE-SET,cproxy,节点选择",     
@@ -430,6 +437,14 @@ function main(config) {
       "include-all": true,
       "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/telegram.svg"
     },    
+    {
+      ...groupBaseOption,
+      "name": "OpenCode",
+      "type": "select",
+      "proxies": ["AI_API", "AI_LIMIT", "节点选择", "延迟选优", "故障转移", "负载均衡(散列)", "负载均衡(轮询)", "全局直连"],
+      "include-all": true,
+      "icon": "https://raw.githubusercontent.com/anomalyco/opencode/dev/packages/web/public/favicon.svg"
+    },
     {
       ...groupBaseOption,
       "name": "AI_API",
