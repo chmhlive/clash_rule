@@ -1,14 +1,14 @@
 # NAME: Global
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2026-08-26 02:33:54
+# UPDATED: 2026-09-01 06:19:40
 # DOMAIN: 128
 # DOMAIN-KEYWORD: 36
-# DOMAIN-SUFFIX: 34739
+# DOMAIN-SUFFIX: 34748
 # IP-CIDR: 112
 # IP-CIDR6: 4
 # PROCESS-NAME: 1
-# TOTAL: 35020
+# TOTAL: 35029
 payload:
   - '1password.drift.click'
   - 'adobeereg.com'
@@ -665,6 +665,7 @@ payload:
   - '+.9anime.id'
   - '+.9anime.to'
   - '+.9anime.ws'
+  - '+.9cao9.com'
   - '+.9ccms.me'
   - '+.9cdn.net'
   - '+.9hentai.ru'
@@ -899,6 +900,7 @@ payload:
   - '+.adguard.info'
   - '+.adguard.io'
   - '+.adguardaccount.com'
+  - '+.adguardaccount.net'
   - '+.adguardcdn.com'
   - '+.adguardvpn.com'
   - '+.adhelpnews.com'
@@ -11402,6 +11404,7 @@ payload:
   - '+.h-webtoon.com'
   - '+.h0930.com'
   - '+.h18ani1.vip'
+  - '+.h264.io'
   - '+.h2o.ai'
   - '+.h2porn.com'
   - '+.habr.com'
@@ -17879,7 +17882,6 @@ payload:
   - '+.nicolepeters.com'
   - '+.nicomanga.jp'
   - '+.niconico.com'
-  - '+.nicoseiga.jp'
   - '+.niees.ac.uk'
   - '+.niesr.ac.uk'
   - '+.night.livedoor.biz'
@@ -18965,6 +18967,7 @@ payload:
   - '+.oursexgames.com'
   - '+.ourshdtv.com'
   - '+.ourshemales.com'
+  - '+.ouryahoo.com'
   - '+.oustudios.ac.uk'
   - '+.out-app-purchase.com'
   - '+.outbound.io'
@@ -20970,6 +20973,7 @@ payload:
   - '+.relu.ac.uk'
   - '+.rememberingslavery.ac.uk'
   - '+.remirepo.net'
+  - '+.remna.st'
   - '+.rems-cdt.ac.uk'
   - '+.renaissanceskin.ac.uk'
   - '+.rencapbank.ru'
@@ -24358,6 +24362,7 @@ payload:
   - '+.toperoticartsites.com'
   - '+.topescort.nl'
   - '+.topescortbabes.com'
+  - '+.topexhib.net'
   - '+.topface.com'
   - '+.topfantasyart.com'
   - '+.topfreepornvideos.com'
@@ -27528,6 +27533,7 @@ payload:
   - '+.yahoodns.net'
   - '+.yahoofinance.com'
   - '+.yahoohealth.com'
+  - '+.yahooinc.com'
   - '+.yahoomusic.com'
   - '+.yahoosportsbook.com'
   - '+.yaklass.ru'
@@ -30399,6 +30405,7 @@ payload:
   - '+.getlantern.org'
   - '+.getmalus.com'
   - '+.getmdl.io'
+  - '+.getmonero.org'
   - '+.getoutline.org'
   - '+.getpricetag.com'
   - '+.getsession.org'
@@ -32108,6 +32115,7 @@ payload:
   - '+.nhncorp.jp'
   - '+.nianticlabs.com'
   - '+.nic.gov'
+  - '+.nicoseiga.jp'
   - '+.nicovideo.jp'
   - '+.nighost.org'
   - '+.nightlife141.com'
@@ -34544,6 +34552,7 @@ payload:
   - '+.wqyd.org'
   - '+.wrchina.org'
   - '+.wretch.cc'
+  - '+.write.as'
   - '+.writesonic.com'
   - '+.wsj.com'
   - '+.wsj.net'
