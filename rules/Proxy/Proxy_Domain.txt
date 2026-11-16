@@ -1,13 +1,13 @@
 # NAME: Proxy
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2026-09-28 04:43:01
+# UPDATED: 2026-10-26 04:16:32
 # DOMAIN: 9
 # DOMAIN-KEYWORD: 26
-# DOMAIN-SUFFIX: 6789
+# DOMAIN-SUFFIX: 6850
 # IP-CIDR: 96
 # IP-CIDR6: 4
-# TOTAL: 6924
+# TOTAL: 6985
 api.waqi.info
 aqi.aqicn.org
 assets-priconne-redive-us.akamaized.net
@@ -30,6 +30,7 @@ voice.telephony.goog
 .111666.best
 .123av.com
 .123av.me
+.123av.org
 .123rf.com
 .12bet.com
 .12vpn.com
@@ -147,6 +148,7 @@ voice.telephony.goog
 .7capture.com
 .7cow.com
 .7mmtv.tv
+.7x24hrs.com
 .8-d.com
 .85cc.net
 .85cc.us
@@ -242,6 +244,7 @@ voice.telephony.goog
 .ai-wen.net
 .ai.dev
 .ai.studio
+.aidc.com.tw
 .aihub.top
 .aiosearch.com
 .aiph.net
@@ -656,6 +659,7 @@ voice.telephony.goog
 .bibliocommons.com
 .bibox.com
 .bic2011.org
+.bidobido.xyz
 .biedian.me
 .big.one
 .bigfools.com
@@ -665,6 +669,8 @@ voice.telephony.goog
 .bignews.org
 .bigone.com
 .bigsound.org
+.bikaios.xyz
+.bikawebapp.com
 .bild.de
 .bilinovel.com
 .biliworld.com
@@ -752,6 +758,7 @@ voice.telephony.goog
 .bloombergview.com
 .bloomfortune.com
 .blubrry.com
+.blue-plus.net
 .blueangellive.com
 .bmdru.com
 .bmfinn.com
@@ -789,6 +796,7 @@ voice.telephony.goog
 .boxunclub.com
 .boyangu.com
 .boyfriendtv.com
+.boylove.cc
 .boysfood.com
 .boysmaster.com
 .br.st
@@ -910,6 +918,7 @@ voice.telephony.goog
 .cams.com
 .cams.org.sg
 .canadameet.com
+.cangku.moe
 .cantonese.asia
 .canva.com
 .canyu.org
@@ -1257,6 +1266,7 @@ voice.telephony.goog
 .compose-spec.io
 .compress.to
 .conoha.jp
+.console.typesafe.ai
 .constitutionalism.solutions
 .contactmagazine.net
 .content.office.net
@@ -1278,6 +1288,7 @@ voice.telephony.goog
 .coursehero.com
 .covenantswatch.org.tw
 .coze.com
+.cpc.com.tw
 .cpj.org
 .cpu-monkey.com
 .cq99.us
@@ -1307,6 +1318,7 @@ voice.telephony.goog
 .crunchyroll.com
 .cruxpool.com
 .cryptographyengineering.com
+.csc.com.tw
 .csdparty.com
 .csis.org
 .csmonitor.com
@@ -1458,6 +1470,7 @@ voice.telephony.goog
 .devv.ai
 .dfas.mil
 .dfn.org
+.dh.net
 .dharamsalanet.com
 .dharmakara.net
 .dhcp.biz
@@ -1494,6 +1507,7 @@ voice.telephony.goog
 .disquscdn.com
 .dit-inc.us
 .divdyn.com
+.diwodiwo.xyz
 .diyin.org
 .dizhidizhi.com
 .dizhuzhishang.com
@@ -1796,6 +1810,7 @@ voice.telephony.goog
 .exchristian.hk
 .excite.co.jp
 .exhentai.org
+.eximbank.com.tw
 .exmo.com
 .exmormon.org
 .expatshield.com
@@ -2176,6 +2191,7 @@ voice.telephony.goog
 .fututrustee.com
 .fux.com
 .fuyin.net
+.fuyin116.com
 .fuyindiantai.org
 .fuyu.org.tw
 .fw.cm
@@ -2192,6 +2208,7 @@ voice.telephony.goog
 .g.kfd.me
 .g0v.social
 .g6hentai.com
+.ga.jspm.io
 .gab.com
 .gabia.net
 .gabocorp.com
@@ -2513,7 +2530,9 @@ voice.telephony.goog
 .halktv.com.tr
 .handcraftedsoftware.org
 .hanime.tv
+.hanime1.com
 .hanime1.me
+.hanimeone.me
 .hanminzu.org
 .hanunyi.com
 .hao.news
@@ -2559,6 +2578,7 @@ voice.telephony.goog
 .hembed.com
 .hentai.to
 .hentai.tv
+.hentaiclub.net
 .hentaitube.tv
 .hentaivideoworld.com
 .heqinglian.net
@@ -2740,6 +2760,7 @@ voice.telephony.goog
 .htx.com
 .hua-yue.net
 .huaglad.com
+.huakacomic.com
 .huanghuagang.org
 .huangyiyu.com
 .huaren.us
@@ -2817,6 +2838,7 @@ voice.telephony.goog
 .ibvpn.com
 .ibytedtos.com
 .icams.com
+.icdf.org.tw
 .icedrive.net
 .icerocket.com
 .icfcdn.com
@@ -2945,6 +2967,7 @@ voice.telephony.goog
 .iownyour.biz
 .iownyour.org
 .ip.sb
+.ipac.global
 .ipaddress.com
 .ipalter.com
 .ipdefenseforum.com
@@ -3053,6 +3076,7 @@ voice.telephony.goog
 .javakiba.org
 .javbus.co
 .javbus.com
+.javchu.com
 .javdb.com
 .javfinder.ai
 .javfor.me
@@ -3204,10 +3228,12 @@ voice.telephony.goog
 .kfor.com
 .khabdha.org
 .khatrimaza.org
+.khc.edu.tw
 .khmusic.com.tw
 .kichiku-doujinko.com
 .kik.com
 .killwall.com
+.kimootoko.net
 .kindle4rss.com
 .kindleren.com
 .kingdomsalvation.org
@@ -3276,6 +3302,7 @@ voice.telephony.goog
 .lamayeshe.com
 .lamnia.co.uk
 .lamrim.com
+.landbank.com.tw
 .landofhope.tv
 .lantern.io
 .lantosfoundation.org
@@ -3506,6 +3533,7 @@ voice.telephony.goog
 .mangafox.me
 .mangaup.jp
 .mangmang.run
+.manhuabika.com
 .manhuaren.com
 .maniash.com
 .manicur4ik.ru
@@ -3540,6 +3568,7 @@ voice.telephony.goog
 .mathable.io
 .mathiew-badimon.com
 .mathjax.org
+.matichon.co.th
 .matome-plus.com
 .matome-plus.net
 .matrix.org
@@ -3608,7 +3637,9 @@ voice.telephony.goog
 .meshrep.com
 .mesotw.com
 .messenger.com
+.meta.ai
 .meta.com
+.metaaivm.com
 .metacafe.com
 .metacubex.one
 .metafilter.com
@@ -3671,16 +3702,20 @@ voice.telephony.goog
 .miniforum.org
 .miningpoolhub.com
 .ministrybooks.org
+.minkch.com
 .minzhuhua.net
 .minzhuzhanxian.com
 .minzhuzhongguo.org
 .miraheze.org
+.mirdc.org.tw
 .miroguide.com
 .mirror.xyz
 .mirrorbooks.com
 .mirrormedia.com.tw
 .mirrormedia.mg
+.missav.ai
 .missav.com
+.missav.live
 .missav.ws
 .mist.vip
 .mistral.ai
@@ -3716,6 +3751,7 @@ voice.telephony.goog
 .modmyi.com
 .moeerolibrary.com
 .moegirl.org
+.moeli-desu.com
 .moeshare.cc
 .mofaxiehui.com
 .mofos.com
@@ -3759,6 +3795,7 @@ voice.telephony.goog
 .mousebreaker.com
 .movements.org
 .moves-export.com
+.movie.eroterest.net
 .moviefap.com
 .mozilla.org
 .moztw.org
@@ -3793,6 +3830,7 @@ voice.telephony.goog
 .mummysgold.com
 .murmur.tw
 .muscdn.com
+.muse.ai
 .musicade.net
 .musical.ly
 .musixmatch.com
@@ -3894,6 +3932,7 @@ voice.telephony.goog
 .nationalinterest.org
 .nationalreview.com
 .nationsonline.org
+.nationthailand.com
 .nationwide.com
 .naughtyamerica.com
 .naver.com
@@ -4026,6 +4065,9 @@ voice.telephony.goog
 .niu.moe
 .niusnews.com
 .njactb.org
+.njav.com
+.njav.tv
+.njavtv.com
 .njuice.com
 .nlfreevpn.com
 .nmsl.website
@@ -4076,6 +4118,7 @@ voice.telephony.goog
 .ns2.name
 .ns3.name
 .nssurge.com
+.nstc.org.tw
 .ntd.tv
 .ntdtv.ca
 .ntdtv.co.kr
@@ -4384,6 +4427,7 @@ voice.telephony.goog
 .phuquocservices.com
 .piaotia.com
 .piaotian.net
+.pica-id.com
 .picacomic.com
 .picacomiccn.com
 .picasaweb.com
@@ -4461,6 +4505,7 @@ voice.telephony.goog
 .plusbb.com
 .pmatehunter.com
 .pmates.com
+.po-kaki-to.com
 .po2b.com
 .pobieramy.top
 .podbean.com
@@ -4473,6 +4518,7 @@ voice.telephony.goog
 .pokerstars.com
 .pokerstars.net
 .pokerstrategy.com
+.poland.tw
 .politicalchina.org
 .politicalconsultation.org
 .politiscales.net
@@ -4613,6 +4659,7 @@ voice.telephony.goog
 .qianmo.tw
 .qidian.ca
 .qienkuen.org
+.qingse.one
 .qiwen.lu
 .qkshare.com
 .qmp4.com
@@ -4778,6 +4825,7 @@ voice.telephony.goog
 .rocketbbs.com
 .rocketcdn.me
 .rocksdb.org
+.rocmgov.org
 .rojo.com
 .rolfoundation.org
 .rolia.net
@@ -5472,6 +5520,7 @@ voice.telephony.goog
 .textnow.com
 .textnow.me
 .tfc-taiwan.org.tw
+.tfd.org.tw
 .tfhub.dev
 .tfiflve.com
 .tg-me.com
@@ -5677,6 +5726,7 @@ voice.telephony.goog
 .tinypic.com
 .tinyurl.com
 .tipas.net
+.tipatipa.xyz
 .tistory.com
 .tkcs-collins.com
 .tl.gd
@@ -5780,6 +5830,7 @@ voice.telephony.goog
 .tsunagarumon.com
 .tt-rss.org
 .tt1069.com
+.ttl.com.tw
 .tttan.com
 .ttv.com.tw
 .ttwstatic.com
@@ -5872,6 +5923,7 @@ voice.telephony.goog
 .tweez.net
 .twelve.today
 .twerkingbutt.com
+.twfhcsec.com.tw
 .twftp.org
 .twgov.tw
 .twgreatdaily.com
@@ -5937,6 +5989,7 @@ voice.telephony.goog
 .tx.me
 .txmblr.com
 .txxx.com
+.tybio.com.tw
 .tycool.com
 .typcn.com
 .typekit.net
@@ -6232,6 +6285,7 @@ voice.telephony.goog
 .vrchat.com
 .vrmtr.com
 .vrsmash.com
+.vscc.org.tw
 .vsco.co
 .vtunnel.com
 .vuku.cc
@@ -6254,6 +6308,7 @@ voice.telephony.goog
 .waiwaier.com
 .walletconnect.com
 .walletconnect.org
+.wallhaven.cc
 .wallmama.com
 .wallornot.org
 .wallpapercasa.com
@@ -6370,11 +6425,13 @@ voice.telephony.goog
 .whyx.org
 .widevine.com
 .wikaba.com
+.wikawika.xyz
 .wiki.esu.im
 .wiki.kfd.me
 .wikia.com
 .wikibooks.org
 .wikidata.org
+.wikifunctions.org
 .wikileaks-forum.com
 .wikileaks.ch
 .wikileaks.com
@@ -6387,12 +6444,14 @@ voice.telephony.goog
 .wikilivres.info
 .wikimapia.org
 .wikimedia.org
+.wikimediafoundation.org
 .wikinews.org
 .wikipedia.com
 .wikipedia.org
 .wikiquote.org
 .wikis.tw
 .wikisource.org
+.wikispecies.org
 .wikiunblocked.org
 .wikiversity.org
 .wikivoyage.org
@@ -6599,6 +6658,7 @@ voice.telephony.goog
 .xvideos.com
 .xvideos.es
 .xvinlink.com
+.xx.net
 .xxbbx.com
 .xxlmovies.com
 .xxuz.com
@@ -6792,6 +6852,7 @@ voice.telephony.goog
 .zophar.net
 .zorrovpn.com
 .zozotown.com
+.zozovideo.com
 .zpn.im
 .zsdxzk.com
 .zspeeder.me
