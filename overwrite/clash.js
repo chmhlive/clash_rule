@@ -22,6 +22,8 @@ const dnsConfig = {
     // 本地主机/设备
     "+.lan",
     "+.local",
+    "ntp.*.com",
+    "time.*.com",
     // Windows网络出现小地球图标
     "+.msftconnecttest.com",
     "+.msftncsi.com",
@@ -34,7 +36,12 @@ const dnsConfig = {
     "+.edisk.top",
     "+.cloudflare.com",
     "+.sourceforge.net",
-    "+.quickconnect.cn"
+    "+.quickconnect.cn",
+    "+.googleapis.com",
+    "daily-cloudcode-pa.googleapis.com",
+    "aicode.googleapis.com",
+    "+.nordicsemi.com",
+    "+.market.xiaomi.com"    
   ],
   "default-nameserver": ["223.5.5.5", "119.29.29.29", "180.76.76.76"],
   "nameserver": [...domesticNameservers, ...foreignNameservers],
