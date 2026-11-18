@@ -19,3 +19,17 @@ payload:
   - DOMAIN-SUFFIX,cerebras.ai
   # -- AgentRouter
   - DOMAIN-SUFFIX,agentrouter.org
+  # -- 补充（AI 工具链 / 服务）
+  - DOMAIN-SUFFIX,tokenharbor.ai
+  - DOMAIN-SUFFIX,teams.live.com
+  - DOMAIN-SUFFIX,pgsgrove.com
+  - DOMAIN-SUFFIX,workbuddy.ai
+  - DOMAIN-SUFFIX,turingfraud.net
+  - DOMAIN-SUFFIX,ipify.org
+  - DOMAIN-SUFFIX,unorouter.com
+  - DOMAIN-SUFFIX,perchai.app
+  - DOMAIN-SUFFIX,supabase.co
+  - DOMAIN-SUFFIX,ai-member.icu
+  - DOMAIN-SUFFIX,86gamestore.com
+  # -- PROCESS-NAME
+  - PROCESS-NAME,WorkBuddyAI.exe

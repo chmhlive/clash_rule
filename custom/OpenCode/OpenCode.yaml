@@ -6,3 +6,5 @@ payload:
   - DOMAIN-SUFFIX,opencode.asia
   # -- 模型元数据目录（TUI 启动时拉取模型列表）
   - DOMAIN-SUFFIX,models.dev
+  # -- 进程
+  - PROCESS-NAME,OpenCode.exe
