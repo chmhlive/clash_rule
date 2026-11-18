@@ -36,6 +36,7 @@ payload:
   # -- cGrok 补充（xAI 额外域名）
   - DOMAIN-SUFFIX,grokipedia.com
   - DOMAIN-SUFFIX,x.ai
+  - DOMAIN-SUFFIX,grokified.com
   - DOMAIN-SUFFIX,featureassets.org
   - DOMAIN-SUFFIX,xai.chronosphere.io
   - IP-CIDR,17.253.4.125
