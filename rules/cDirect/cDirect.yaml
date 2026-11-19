@@ -24,3 +24,5 @@ payload:
   - DOMAIN,release-assets.githubusercontent.com
   # -- IP-CIDR
   - IP-CIDR,183.239.156.67/8,no-resolve
+  # -- PROCESS-NAME
+  - PROCESS-NAME,WorkBuddy.exe
