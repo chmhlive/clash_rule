@@ -37,6 +37,9 @@ const dnsConfig = {
     "+.cloudflare.com",
     "+.sourceforge.net",
     "+.quickconnect.cn",
+    "+.googleapis.com",
+    "daily-cloudcode-pa.googleapis.com",
+    "aicode.googleapis.com",
     "+.nordicsemi.com",
     "+.market.xiaomi.com"    
   ],
